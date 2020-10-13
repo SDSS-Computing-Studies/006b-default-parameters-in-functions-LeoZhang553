@@ -57,7 +57,7 @@ def cosineLaw(a,b,c,oppositeSide=True):
             return solution(d)
 
 print(cosineLaw(10,3,50,oppositeSide=False))
-print(quadratic(3,5,-8))
+
 
 
     

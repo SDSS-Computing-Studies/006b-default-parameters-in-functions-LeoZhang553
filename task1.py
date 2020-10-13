@@ -3,10 +3,10 @@
 import assignment
 
 def tempConversion(degrees,unit="C"):
-    if unit=='C':
+    if unit=="C":
         a = (degrees*9/5)+32
         return a
-    elif unit=='F':
+    elif unit=="F":
         a = (degrees - 32)*5/9
         return a
 
