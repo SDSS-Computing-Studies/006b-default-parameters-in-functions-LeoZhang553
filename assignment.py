@@ -27,9 +27,9 @@ def toRadians(a):
 
 def quadratic(a,b,c):
     e=b**2 - 4*a*c
-    s1=(-b+math.sqrt(e))/(2*a)
-    s2=(-b-math.sqrt(e))/(2*a)
-    s2=round(s2,2)
+    s2=(-b+math.sqrt(e))/(2*a)
+    s1=(-b-math.sqrt(e))/(2*a)
+    s1=round(s1,2)
     List=[s1,s2]
     return List
 
