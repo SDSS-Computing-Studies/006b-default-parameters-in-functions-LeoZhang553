@@ -8,10 +8,11 @@ def tempConversion(degrees,unit="C"):
         return a
     elif unit=="F":
         a = (degrees - 32)*5/9
+        a=round(a,1)
         return a
 
 print( assignment.tempConversion(0) ) 
-print( round(assignment.tempConversion( 72, "F"),1) ) 
+print( assignment.tempConversion( 72, "F")) 
 
 
 
