@@ -23,13 +23,13 @@ def factorPair(a,factor):
 
 def toRadians(a):
     b=(a/180)*math.pi
-    print(b)
     return b
 
 def quadratic(a,b,c):
     e=b**2 - 4*a*c
-    s1=(-b+math.sqrt(e))/(2**a)
-    s2=(-b-math.sqrt(e))/(2**a)
+    s1=(-b+math.sqrt(e))/(2*a)
+    s2=(-b-math.sqrt(e))/(2*a)
+    s2=round(s2,2)
     List=[s1,s2]
     return List
 
@@ -56,8 +56,7 @@ def cosineLaw(a,b,c,oppositeSide=True):
             d=quadratic(1,2*a*math.cos(c),a**2-b**2)
             return solution(d)
 
-print(cosineLaw(10,3,50,oppositeSide=False))
-
+print(quadratic(3,5,-8))
 
 
     
