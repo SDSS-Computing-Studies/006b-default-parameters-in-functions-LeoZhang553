@@ -56,7 +56,7 @@ def cosineLaw(a,b,c,oppositeSide=True):
             d=quadratic(1,2*a*math.cos(c),a**2-b**2)
             return solution(d)
 
-print(quadratic(3,5,-8))
+print(cosineLaw(10,3,50,oppositeSide=False))
 
 
     
