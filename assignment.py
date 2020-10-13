@@ -23,27 +23,41 @@ def factorPair(a,factor):
 
 def toRadians(a):
     b=(a/180)*math.pi
+    print(b)
     return b
 
-# b is the missing side
-# convert cosine law into quadratic fomula
-def cosineLaw(a,d,c,oppositeSide=True):
-    pass
-    
-
 def quadratic(a,b,c):
-    r=toRadians(c)
     e=b**2 - 4*a*c
     s1=(-b+math.sqrt(e))/(2**a)
     s2=(-b-math.sqrt(e))/(2**a)
     List=[s1,s2]
-    print(List)
     return List
 
-
-def solution():
-    a,b=quadratic(a,b,c)
+def solution(List):
+    #a,b=cosineLaw(10,3,50,oppositeSide=False)
+    a,b = List
     if a>0:
-        print(a)
+        return a
     else:
-        print(b)
+        return b
+    
+def cosineLaw(a,b,c,oppositeSide=True):
+    c=toRadians(c)
+    if oppositeSide==True:
+        d=math.sqrt(a**2+b**2 - 2*a*b*math.cos(c))
+        return d
+    else:
+        if a>b:
+            # d**2 -2*d*b*math.cos(c)+b**2-a**2=0
+            d=quadratic(1,2*b*math.cos(c),b**2-a**2)
+            return solution(d)
+        elif a<b:
+            # d**2 -2*a*d*math.cos(c)+a**2-b**2=0
+            d=quadratic(1,2*a*math.cos(c),a**2-b**2)
+            return solution(d)
+
+print(cosineLaw(10,3,50,oppositeSide=False))
+
+
+
+    
