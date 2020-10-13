@@ -11,7 +11,7 @@ def tempConversion(degrees,unit="C"):
         return a
 
 print( assignment.tempConversion(0) ) 
-print( assignment.tempConversion( 72, "F") ) 
+print( round(assignment.tempConversion( 72, "F"),1) ) 
 
 
 
